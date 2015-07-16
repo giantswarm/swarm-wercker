@@ -1,4 +1,4 @@
-from app import app
+from server import app
 
 import unittest
 

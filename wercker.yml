@@ -1,5 +1,5 @@
+box: python:2.7-slim
 dev:
-  box: python:2.7-slim
   steps:
     - pip-install
     - internal/watch:
@@ -7,7 +7,6 @@ dev:
         reload: true
 
 build:
-  box: python:2.7-slim
   steps:
     - pip-install
     - script:
@@ -22,7 +21,7 @@ deploy:
         username: kord
         password: bazf00
         tag: latest
-        repository: registry.giantswarm.io/kord/getting-started-python
+        repository: registry.giantswarm.io/kord/swacker
         registry: https://registry.giantswarm.io
 
     - script:
@@ -33,4 +32,4 @@ deploy:
     - termie/giantswarm:
         env: kord/dev
         token: 820f7077-b6b7-4e75-8afd-41dc4e59a98b
-        update: getting-started-python/getting-started-service/flask
+        update: swacker/swacker-service/flask
