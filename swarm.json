@@ -1,0 +1,18 @@
+{
+  "app_name": "swacker",
+  "services": [
+    {
+      "service_name": "swacker-service",
+      "components": [
+        {
+          "component_name": "flask",
+          "image": "registry.giantswarm.io/kord/swacker",
+          "ports": ["5000/tcp"],
+          "domains": {
+            "swacker.gigantic.io": "5000"
+          }
+        }
+      ]
+    }
+  ]
+}
