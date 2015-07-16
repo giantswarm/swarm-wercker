@@ -1,5 +1,5 @@
+box: python:2.7-slim
 dev:
-  box: python:2.7-slim
   steps:
     - pip-install
     - internal/watch:
@@ -7,7 +7,6 @@ dev:
         reload: true
 
 build:
-  box: python:2.7-slim
   steps:
     - pip-install
     - script:
