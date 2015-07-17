@@ -10,7 +10,7 @@ dev:
 build:
   box: python:2.7-slim
   steps:
-    - pip-install
+    - script:
     - script:
         name: python unit test
         code: |
@@ -20,8 +20,8 @@ deploy:
   box: python:2.7-slim
   steps:
     - internal/docker-push:
-        username: kord 
-        password: bazf00
+        username: $gsuser 
+        password: $gspass
         tag: latest
         cmd: /pipeline/source/entrypoint.sh
         ports: "5000"
