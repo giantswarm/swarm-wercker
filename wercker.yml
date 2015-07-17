@@ -3,7 +3,7 @@ dev:
   steps:
     - pip-install
     - internal/watch:
-        code: python app.py
+        code: python server.py
         reload: true
 
 build:
@@ -18,13 +18,12 @@ build:
         code: cp -r static server.py "$WERCKER_OUTPUT_DIR"
 
 deploy:
-  box: python:2.7-slim
   steps:
     - internal/docker-scratch-push:
         username: kord 
         password: bazf00
         tag: latest
-        cmd: python2 server.py
+        cmd: which python
         ports: "5000"
         repository: registry.giantswarm.io/kord/swacker
         registry: https://registry.giantswarm.io
