@@ -1,5 +1,5 @@
 dev:
-  box: python:2.7
+  box: python:2.7-slim
   steps:
     - pip-install
     - internal/watch:
@@ -7,7 +7,7 @@ dev:
         reload: true
 
 build:
-  box: python:2.7
+  box: python:2.7-slim
   steps:
     - pip-install
     - script:
@@ -19,13 +19,13 @@ build:
         code: cp -r entrypoint.sh static server.py "$WERCKER_OUTPUT_DIR"
 
 deploy:
-  box: python:2.7
+  box: python:2.7-slim
   steps:
     - internal/docker-push:
         username: kord 
         password: bazf00
         tag: latest
-        cmd: 
+        cmd: ./entrypoint.sh
         ports: "5000"
         repository: registry.giantswarm.io/kord/swacker
         registry: https://registry.giantswarm.io
