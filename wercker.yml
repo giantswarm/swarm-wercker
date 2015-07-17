@@ -21,8 +21,8 @@ deploy:
   box: python:2.7-slim
   steps:
     - internal/docker-scratch-push:
-        username: $GIANTSWARM_REGISTRY_USERNAME
-        password: $GIANTSWARM_REGISTRY_PASSWORD
+        username: kord 
+        password: bazf00
         tag: latest
         cmd: python server.py
         ports: "5000"
