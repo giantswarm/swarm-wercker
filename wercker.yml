@@ -1,5 +1,5 @@
 dev:
-  box: python:2.7-slim
+  box: python:2.7
   steps:
     - pip-install
     - internal/watch:
