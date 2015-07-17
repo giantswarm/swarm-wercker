@@ -18,10 +18,6 @@ build:
           python app_test.py
 
     - script:
-        name: manually install flask
-        code: pip install flask
-
-    - script:
         name: copy binary
         code: cp -r entrypoint.sh static server.py /
 
