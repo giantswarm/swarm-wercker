@@ -1,4 +1,4 @@
 # Swacker
-Swacker is a minimal example illustrating continuous integration using Wercker's continuous integration service and Giant Swarm's container hosting service.
+Swacker is a minimal static website example deployed to Giant Swarm using Wercker's continuous integration service.
 
 ## Getting Started

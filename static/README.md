@@ -1,2 +1,2 @@
 # Static Files
-Put you static files in here. Shocking, I know.
+Put your static files in here and have them served by Giant Swarm. Shocking, I know.
