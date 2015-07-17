@@ -13,22 +13,22 @@ build:
         name: python unit test
         code: |
           python app_test.py
+    - script:
+        name: copy binary
+        code: cp -r static server.py "$WERCKER_OUTPUT_DIR"
 
 deploy:
   box: python:2.7-slim
   steps:
     - internal/docker-scratch-push:
-        username: kord
-        password: bazf00
+        username: $GIANTSWARM_REGISTRY_USERNAME
+        password: $GIANTSWARM_REGISTRY_PASSWORD
         tag: latest
+        cmd: python server.py
+        ports: "5000"
         repository: registry.giantswarm.io/kord/swacker
         registry: https://registry.giantswarm.io
 
-    - script:
-        name: ping
-        code: |
-          ping -c 1 www.google.com
-          
     - kordless/giantswarm:
         env: kord/prod
         token: 820f7077-b6b7-4e75-8afd-41dc4e59a98b
