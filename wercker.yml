@@ -16,7 +16,7 @@ build:
           python app_test.py
     - script:
         name: copy binary
-        code: cp -r entrypoint.sh static server.py "$WERCKER_OUTPUT_DIR"
+        code: cp -r static server.py "$WERCKER_OUTPUT_DIR"
 
 deploy:
   box: python:2.7-slim
@@ -25,7 +25,7 @@ deploy:
         username: kord 
         password: bazf00
         tag: latest
-        cmd: ./entrypoint.sh
+        cmd: python server.py
         ports: "5000"
         repository: registry.giantswarm.io/kord/swacker
         registry: https://registry.giantswarm.io
