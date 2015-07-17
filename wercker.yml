@@ -21,11 +21,13 @@ build:
 deploy:
   box: python:2.7-slim
   steps:
+    - pip-install
+    
     - internal/docker-push:
         username: kord 
         password: bazf00
         tag: latest
-        cmd: ./entrypoint.sh
+        cmd: pwd; ls
         ports: "5000"
         repository: registry.giantswarm.io/kord/swacker
         registry: https://registry.giantswarm.io
