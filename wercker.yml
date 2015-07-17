@@ -15,14 +15,16 @@ build:
         code: |
           python app_test.py
     - script:
+        name: manually install flask
+        code: pip install flask
+
+    - script:
         name: copy binary
         code: cp -r entrypoint.sh static server.py "$WERCKER_OUTPUT_DIR"
 
 deploy:
   box: python:2.7-slim
   steps:
-    - pip-install
-    
     - internal/docker-push:
         username: kord 
         password: bazf00
