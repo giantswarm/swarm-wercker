@@ -24,7 +24,7 @@ deploy:
         username: kord 
         password: bazf00
         tag: latest
-        cmd: python server.py
+        cmd: python2 server.py
         ports: "5000"
         repository: registry.giantswarm.io/kord/swacker
         registry: https://registry.giantswarm.io
