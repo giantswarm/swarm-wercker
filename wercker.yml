@@ -2,6 +2,7 @@ dev:
   box: python:2.7-slim
   steps:
     - pip-install
+
     - internal/watch:
         code: python server.py
         reload: true
@@ -10,10 +11,12 @@ build:
   box: python:2.7-slim
   steps:
     - pip-install
+
     - script:
         name: python unit test
         code: |
           python app_test.py
+
     - script:
         name: manually install flask
         code: pip install flask
@@ -29,7 +32,7 @@ deploy:
         username: kord 
         password: bazf00
         tag: latest
-        cmd: env
+        cmd: ./entrypoint.sh
         ports: "5000"
         repository: registry.giantswarm.io/kord/swacker
         registry: https://registry.giantswarm.io
