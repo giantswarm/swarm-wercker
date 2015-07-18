@@ -51,7 +51,7 @@ You should be taken to the `project overview` page for the `swarm-wercker` proje
 #### Create a Deploy Target
 At the top right of the `swarm-wercker` project, click on the `gear icon` to view the application's settings. Click on the `deploy targets` tab to the left, and then click on the `add deploy target` pulldown. Select `custom deploy` and then enter `prod` for your deploy target name. Check the `auto deploy successful builds to branch` checkbox and enter `master` in the branch field:
 
-![repo'd](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/repo.png)
+![deploy](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/deploy.png)
 
 Click save and then click on the `add new variable` button. You will need to create three variables, one named `gsuser`, one named `gspass`, and one name `gsenv`. The values will be, respectivly, your Giant Swarm username, your password and your desired environment (which usually defaults to <username>/dev).
 
