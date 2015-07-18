@@ -83,12 +83,52 @@ http://swacker-<username>.gigantic.io/
 
 Obviously, you'll need to substitute your Giant Swarm username for the `<username>` placeholder in the URL above!
 
-### Scaling Your Application to Prevent Downtime
-You can make your application highly available, even through upgrades, using [Giant Swarm's CLI](https://docs.giantswarm.io/reference/cli/installation/) to scale up your application to multiple instances. To scale your application, use the `swarm` command:
+### Use the Giant Swarm CLI to Manage Your Application
+You can manage your application on Giant Swarm by using the [Giant Swarm's CLI](https://docs.giantswarm.io/reference/cli/installation/). 
+
+Start out by cloning the repository to your local machine using your Github username:
+
+```
+$ git clone https://github.com/<github_username>/swarm-wercker.git
+Cloning into 'swarm-wercker'...
+remote: Counting objects: 149, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 149 (delta 2), reused 0 (delta 0), pack-reused 141
+Receiving objects: 100% (149/149), 82.77 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (74/74), done.
+Checking connectivity... done.
+```
+
+Next, copy the `swarmvars.json.example` to `swarmvars.json`:
+
+```
+$ cd swarm-wercker
+$ cp swarmvars.json.example swarmvars.json
+```
+
+Edit the swarmvars.json file to suit your Giant Swarm account setup, substituting your username for `<username>` as shown in the example below:
+
+```
+{
+  "<username>/prod": {
+    "user": "<username>"
+  }
+}
+```
+
+Finally, we'll scale our application up by one instance to keep it highly available during Wercker pushes by using the `swarm scaleup` command:
 
 ```
 $ swarm scaleup swacker/swacker-service/flask 1
+$ swarm status
+App swacker is starting
+
+service          component  image                                       instanceid    created              status
+swacker-service  flask      registry.giantswarm.io/kord/swacker:latest  122j16cp7tsx  2015-07-18 19:24:38  starting
+swacker-service  flask      registry.giantswarm.io/kord/swacker:latest  g0s2o5hn1in8  2015-07-18 18:40:05  up
 ```
+
+More information about using the `swarm` CLI is available in the [Giant Swarm documentation](https://docs.giantswarm.io/).
 
 ### Local Development with Wercker
 You can do local development on this project by using Wercker's CLI. To start the development server, use the `wercker` command:
@@ -102,3 +142,5 @@ You can access the develop server by using the following URL:
 ```
 http://0.0.0.0:5000
 ```
+
+More information about using the `wercker` CLI is available in the [Wercker Devcenter](http://devcenter.wercker.com/docs/using-the-cli/index.html).
