@@ -53,9 +53,13 @@ At the top right of the `swarm-wercker` project, click on the `gear icon` to vie
 
 ![deploy](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/deploy.png)
 
-Click save and then click on the `add new variable` button. You will need to create three variables, one named `gsuser`, one named `gspass`, and one name `gsenv`. The values will be, respectivly, your Giant Swarm username, your password and your desired environment (which usually defaults to <username>/dev).
+Click save and then click on the `add new variable` button. You will need to create three variables, one named `gsuser`, one named `gspass`, and one name `gsenv`. The values will be, respectively, your Giant Swarm username, password and [desired environment](https://docs.giantswarm.io/reference/cli/env/) (which usually defaults to <username>/dev). Be sure to check the `protected` checkbox before clicking on `ok` when adding the password variable.
 
-*Note: Using your username and password from one site in another site is less than ideal. While Giant Swarm supports tokenized operations via our API, we do not (yet) do so with our hosted Docker registry. Please contact me for more information on how to work around this issue until we get our registry authentication sorted around!*
+![deploy](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/deploy.png)
+
+*Note: From a security perspective, using a username and password from one site in another site is less than ideal. While Giant Swarm supports tokenized operations via our API, we do not (yet) support them with our hosted Docker registry. Please contact me ([@kordless](https://twitter.com/kordless)) for more information on how to work around this issue using Google's container registry.*
+
+
 
 
 
