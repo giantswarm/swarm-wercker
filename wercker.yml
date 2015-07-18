@@ -36,5 +36,5 @@ deploy:
     - kordless/giantswarm:
         env: $gsenv
         token: $gstoken
-        opts: --var=gspass=$gspass
+        opts: --var=gsuser=$gsuser
         update: swacker/swacker-service/flask
