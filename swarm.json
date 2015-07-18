@@ -6,10 +6,10 @@
       "components": [
         {
           "component_name": "flask",
-          "image": "registry.giantswarm.io/$gsuser/swacker",
+          "image": "registry.giantswarm.io/$user/swacker",
           "ports": ["5000/tcp"],
           "domains": {
-            "swacker-$gsuser.gigantic.io": "5000"
+            "swacker-$user.gigantic.io": "5000"
           }
         }
       ]
