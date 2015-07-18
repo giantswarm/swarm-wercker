@@ -1,4 +1,4 @@
-## Swacker: Continuously Integrated 
+## Swacker: Continuously Integrated Containers 
 [![wercker status](https://app.wercker.com/status/a1d6ceeacff03f2d238c88cfbc09b397/m "wercker status")](https://app.wercker.com/project/bykey/a1d6ceeacff03f2d238c88cfbc09b397)
 
 Swacker (swarm-wercker) is a minimal static webapp which is deployed to a public version of [Giant Swarm's](https://giantswarm.io) Giant OS using [Wercker's](http://wercker.com) continuous integration service.
