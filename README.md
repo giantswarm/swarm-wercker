@@ -31,18 +31,18 @@ You should be able to do all these steps from a web browser, but it's also possi
 #### Fork the Repo
 Start by forking [this repository](https://github.com/giantswarm/swarm-wercker) by clicking on the **fork** button at the top right of the repository page on Github. Fork the repo into a publicly accessable organization or your default organization on Github:
 
-![fork this](https://raw.githubusercontent.com/kordless/swarm-wercker/master/static/fork.png)
+![fork this](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/fork.png)
 
 #### Log In to Wercker and Add the Project
 Next, head on over to [Wercker's login page](https://app.wercker.com/sessions/new) and click on the **Log in with Github** button at the bottom. You may need to do some addtional setup for your worker account. 
 
 Once you are doin with setting up your account, you'll want to allow Wercker to have access to your public and private repos:
 
-![all your base](https://raw.githubusercontent.com/kordless/swarm-wercker/master/static/wercker.png)
+![all your base](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/wercker.png)
 
 Click on the [create new applicaiton](https://app.wercker.com/#applications/create) pulldown at the top of the page to create a new application. You'll click on the ***Use Github*** option in step #1 and then select the repo you forked earlier in step #2:
 
-![repo'd](https://raw.githubusercontent.com/kordless/swarm-wercker/master/static/repo.jpg)
+![repo'd](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/repo.jpg)
 
 Under step #3, **select owner**, choose the default self-organization. Under step #4, **configure access**, choose **wercker will checkout the code without using an SSH key** and click `next step`. Regardless of whether Wercker finds a valid `wercker.yml` file in step #5, simply click `next step` and then click the `finish` button.
 
@@ -51,7 +51,7 @@ You should be taken to the **project overview** page for the `swarm-wercker` pro
 #### Create a Deploy Target
 At the top right of the `swarm-wercker` project, click on the **gear icon** to view the application's settings. Click on the **deploy targets** tab to the left, and then click on the **add deploy target** pulldown. Select **custom deploy** and then enter **prod** for your deploy target name. Check the **auto deploy successful builds to branch** checkbox and enter **master** in the branch field:
 
-![repo'd](https://raw.githubusercontent.com/kordless/swarm-wercker/master/static/repo.png)
+![repo'd](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/repo.png)
 
 Click save and then click on the **add new variable** button. You will need to create three variables, one named `gsuser`, one named `gspass`, and one name `gsenv`. The values will be, respectivly, your Giant Swarm username, your password and your desired environment (which usually defaults to <username>/dev).
 
