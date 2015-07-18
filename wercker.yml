@@ -27,6 +27,7 @@ deploy:
     - internal/docker-push:
         username: $gsuser 
         password: $gspass
+        options: --var=gspass=$gspass
         tag: latest
         cmd: /pipeline/source/entrypoint.sh
         ports: "5000"
