@@ -19,7 +19,7 @@ If you want to do local development, testing, and deploys you should have the fo
 * A functional install of [boot2docker](https://github.com/kordless/boot2docker-ing).
 * The `swarm` command line client [installed](http://docs.giantswarm.io/reference/installation/).
 * The `wercker` command line client [installed](http://devcenter.wercker.com/docs/using-the-cli/installing.html).
-* The `git` command line client [installed](https://git-scm.com/downloads)
+* The `git` command line client [installed](https://git-scm.com/downloads).
 
 ### Video Walk-through
 Videos guides are becoming a dime-a-dozen nowadays. I do mine from the hip and try not to overproduce them, which gives them a slightly artisan feeling. That's what I tell myself, anyway.
