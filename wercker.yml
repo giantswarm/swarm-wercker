@@ -27,7 +27,6 @@ deploy:
     - internal/docker-push:
         username: $gsuser 
         password: $gspass
-        opts: --var=gspass=$gspass
         tag: latest
         cmd: /pipeline/source/entrypoint.sh
         ports: "5000"
@@ -37,4 +36,5 @@ deploy:
     - kordless/giantswarm:
         env: $gsenv
         token: $gstoken
+        opts: --var=gspass=$gspass
         update: swacker/swacker-service/flask
