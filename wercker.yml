@@ -25,16 +25,17 @@ deploy:
   box: python:2.7-slim
   steps:
     - internal/docker-push:
-        username: $gsuser 
-        password: $gspass
+        username: $user 
+        password: $pass
         tag: latest
         cmd: /pipeline/source/entrypoint.sh
         ports: "5000"
-        repository: registry.giantswarm.io/$gsuser/swacker
+        repository: registry.giantswarm.io/$user/swacker
         registry: https://registry.giantswarm.io
 
     - kordless/giantswarm:
-        env: $gsenv
-        token: $gstoken
-        opts: --var=gsuser=$gsuser
+        env: $env
+        user: $user
+        pass: $pass
+        opts: --var=user=$user
         update: swacker/swacker-service/flask
