@@ -1,7 +1,5 @@
-## Swacker: Code to Hosted Container in 3 Minutes
-Swacker (swarm-wercker) is a minimal static webapp which is deployed to [Giant Swarm](https://giantswarm.io) using [Wercker's](https://wercker.com) continuous integration service. Giant Swarm's shared public cluster is currently in [private alpha](https://giantswarm.io/request-invite/) and it runs our custom container stack.
-
-Ping [me on Twitter](https://twitter.com/kordless) if you need your application for our Alpha test pushed through. We're working hard toward beta.
+## Swacker: Continuously Integrated Containers
+Swacker (swarm-wercker) is a minimal static webapp which is deployed to a public version of [Giant Swarm's](https://giantswarm.io) Giant OS using [Wercker's](https://wercker.com) continuous integration service.
 
 The most interesting thing about Swacker is the fact you **don't** need `git`, `docker`, `boot2docker`, or anything else installed locally to launch your own containerized website on Giant Swarm. Shoot, you could probably launch the software using just your phone, now I think about it.
 
@@ -13,6 +11,8 @@ At a minimum you will need the following to launch the software:
 * A Github [account](https://github.com).
 * A Giant Swarm [account](https://giantswarm.io).
 * A Wercker [account](https://wercker.com).
+
+*Note: Giant Swarm's shared public cluster is currently in [private alpha](https://giantswarm.io/request-invite/). Ping [me on Twitter](https://twitter.com/kordless) if you need your application pushed through!*
 
 If you want to do local development, testing, and deploys you should have the following installed:
 
@@ -61,5 +61,42 @@ These values will be, respectively, your Giant Swarm username, password and [des
 *Note: From a security perspective, using a username and password from one site in another site is less than ideal. While Giant Swarm supports tokenized operations via our API, we do not (yet) support them with our hosted Docker registry. Please contact [@kordless](https://twitter.com/kordless) for more information on how to address this issue with alternate registries.*
 
 #### Build and Deploy the Project
-Builds and deploys for the project occur when you do code pushes to the `master` branch of your newly forked `swarm-wercker` repo. To trigger the build, navigate back to the project's repo in your Github account and 
+Builds and deploys for the project occur when you do code pushes to the `master` branch of your newly forked `swarm-wercker` repo. To trigger the build, navigate back to the project's repo in your Github account and go edit the `index.html` file in the `static` directory to look something like this:
 
+```
+<h2>Lamas love CI!</h2>
+<img src="/lama.jpg" \>
+```
+
+![lama lama ding dong](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/update.png)
+
+When you are done editing the file, click on the `commit changes` button at the bottom. Wercker will start building your project and deploy it within a few minutes.
+
+### Accessing the Application
+When Wercker gets done with deploying your application, you should have a simple website up and running at the following URL:
+
+```
+http://swacker-<username>.gigantic.io/
+```
+
+Obviously, you'll need to substitute your Giant Swarm username for the `<username>` placeholder in the URL above!
+
+### Scaling Your Application to Prevent Downtime
+You can make your application highly available, even through upgrades, using [Giant Swarm's CLI](https://docs.giantswarm.io/reference/cli/installation/) to scale up your application to multiple instances. To scale your application, use the `swarm` command:
+
+```
+$ swarm scaleup swacker/swacker-service/flask 1
+```
+
+### Local Development with Wercker
+You can do local development on this project by using Wercker's CLI. To start the development server, use the `wercker` command:
+
+```
+$ wercker dev
+```
+
+You can access the develop server by using the following URL:
+
+```
+http://0.0.0.0:5000
+```
