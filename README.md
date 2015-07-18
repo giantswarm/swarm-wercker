@@ -54,12 +54,12 @@ At the top right of the `swarm-wercker` project, click on the `gear icon` to vie
 
 ![deploy](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/deploy.png)
 
-Click save and then click on the `add new variable` button. You will need to create three variables, one named `gsuser`, one named `gspass`, and one name `gsenv`, all of which you can reference in the image above.
+Click save and then click on the `add new variable` button. You will need to create three variables, one named `user`, one named `pass`, and one name `env`, all of which you can reference in the image above.
 
 These values will be, respectively, your Giant Swarm username, password and [desired environment](https://docs.giantswarm.io/reference/cli/env/) (which usually defaults to `<username>/dev`). Be sure to check the `protected` checkbox before clicking on `ok` when adding the password variable!
 
 *Note: From a security perspective, using a username and password from one site in another site is less than ideal. While Giant Swarm supports tokenized operations via our API, we do not (yet) support them with our hosted Docker registry. Please contact me ([@kordless](https://twitter.com/kordless)) for more information on how to address this issue.*
 
-#### Build the Project
-Builds and deploys for your new project occur when you 
+#### Build and Deploy the Project
+Builds and deploys for the project occur when you do code pushes to the `master` branch of your newly forked `swarm-wercker` repo. To trigger the build, navigate back to the project's repo in your Github account and 
 
