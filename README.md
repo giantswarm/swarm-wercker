@@ -1,5 +1,5 @@
 ## Swacker: Code to Hosted Container in 3 Minutes
-Swacker (swarm-wercker) is a minimal static webapp which is deployed to [Giant Swarm](https://giantswarm.io) using [Wercker's](https://wercker.com) continuous integration service. Giant Swarm's shared public cluster is currently in [private alpha](https://giantswarm.io/request-invite/). but we also do on-prem and dedicated solutions, if you are interested in that sort of thing.
+Swacker (swarm-wercker) is a minimal static webapp which is deployed to [Giant Swarm](https://giantswarm.io) using [Wercker's](https://wercker.com) continuous integration service. Giant Swarm's shared public cluster is currently in [private alpha](https://giantswarm.io/request-invite/) and it runs our custom container stack. We do on-prem and dedicated solutions, if you are in need in that sort of thing.
 
 You should ping [me on Twitter](https://twitter.com/kordless) if you need your application for our Alpha test pushed through.
 
