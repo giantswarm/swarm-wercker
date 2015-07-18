@@ -1,7 +1,7 @@
 ## Swacker: Continuously Integrated Containers 
-[![wercker status](https://app.wercker.com/status/a1d6ceeacff03f2d238c88cfbc09b397/m "wercker status")](https://app.wercker.com/project/bykey/a1d6ceeacff03f2d238c88cfbc09b397)
+Swacker (swarm-wercker) is a minimal static webapp which is deployed to a public version of [Giant Swarm's](https://giantswarm.io) Giant OS using [Wercker's](http://wercker.com) continuous integration service. This repository is being continously deployed to [http://swacker-kord.gigantic.io](http://swacker-kord.gigantic.io) and has the following status:
 
-Swacker (swarm-wercker) is a minimal static webapp which is deployed to a public version of [Giant Swarm's](https://giantswarm.io) Giant OS using [Wercker's](http://wercker.com) continuous integration service.
+[![wercker status](https://app.wercker.com/status/a1d6ceeacff03f2d238c88cfbc09b397/m "wercker status")](https://app.wercker.com/project/bykey/a1d6ceeacff03f2d238c88cfbc09b397)
 
 The most interesting thing about Swacker is the fact you **don't need** `git`, `docker`, `boot2docker`, or anything else installed locally to launch your own containerized website on [Giant Swarm](https://giantswarm.io). Shoot, now I think about it, you could probably launch the software using just your phone!
 
