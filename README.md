@@ -70,7 +70,9 @@ Builds and deploys for the project occur when you do code pushes to the `master`
 
 ![lama lama ding dong](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/update.png)
 
-When you are done editing the file, click on the `commit changes` button at the bottom. Wercker will start building your project and deploy it within a few minutes.
+When you are done editing the file, click on the `commit changes` button at the bottom. Wercker will start building your project and deploy it within a few minutes. I recommend installing the [Wercker desktop app](http://wercker.com/downloads/) to monitor your builds.
+
+![ww](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/widget.png)
 
 ### Accessing the Application
 When Wercker gets done with deploying your application, you should have a simple website up and running at the following URL:
