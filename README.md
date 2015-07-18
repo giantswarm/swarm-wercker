@@ -1,9 +1,9 @@
 ## Swacker: Code to Hosted Container in 3 Minutes
-Swacker (swarm-wercker) is a minimal static webapp which is deployed to [Giant Swarm](https://giantswarm.io) using [Wercker's](https://wercker.com) continuous integration service. Giant Swarm's shared public cluster is currently in [private alpha](https://giantswarm.io/request-invite/). but we also do on-prem and dedicated solutions, both of which should work with this solution.
+Swacker (swarm-wercker) is a minimal static webapp which is deployed to [Giant Swarm](https://giantswarm.io) using [Wercker's](https://wercker.com) continuous integration service. Giant Swarm's shared public cluster is currently in [private alpha](https://giantswarm.io/request-invite/). but we also do on-prem and dedicated solutions, both of which should work with this.
 
-You should ping [me on Twitter](https://twitter.com/kordless) if you need your signup pushed through.
+You should ping [me on Twitter](https://twitter.com/kordless) if you need your application for our Alpha test pushed through.
 
-The most interesting thing about Swacker is the fact you `don't` need `git`, `docker`, `boot2docker`, or anything else installed locally to launch your own containerized website on Giant Swarm. Shoot, you could probably launch the software using just your phone, now I think about it.
+The most interesting thing about Swacker is the fact you **don't** need `git`, `docker`, `boot2docker`, or anything else installed locally to launch your own containerized website on Giant Swarm. Shoot, you could probably launch the software using just your phone, now I think about it.
 
 Let's get started with the detailed walk-through for deploying the code. If you like, you can skip to the [blog post version](http://giantswarm.io/code-to-hosted-container-no-docker-required/), which is less filling.
 
@@ -53,12 +53,13 @@ At the top right of the `swarm-wercker` project, click on the `gear icon` to vie
 
 ![deploy](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/deploy.png)
 
-Click save and then click on the `add new variable` button. You will need to create three variables, one named `gsuser`, one named `gspass`, and one name `gsenv`. The values will be, respectively, your Giant Swarm username, password and [desired environment](https://docs.giantswarm.io/reference/cli/env/) (which usually defaults to <username>/dev). Be sure to check the `protected` checkbox before clicking on `ok` when adding the password variable.
+Click save and then click on the `add new variable` button. You will need to create three variables, one named `gsuser`, one named `gspass`, and one name `gsenv`, all of which you can reference in the image above.
 
-![deploy](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/deploy.png)
+These values will be, respectively, your Giant Swarm username, password and [desired environment](https://docs.giantswarm.io/reference/cli/env/) (which usually defaults to `<username>/dev`). Be sure to check the `protected` checkbox before clicking on `ok` when adding the password variable!
 
-*Note: From a security perspective, using a username and password from one site in another site is less than ideal. While Giant Swarm supports tokenized operations via our API, we do not (yet) support them with our hosted Docker registry. Please contact me ([@kordless](https://twitter.com/kordless)) for more information on how to work around this issue using Google's container registry.*
+*Note: From a security perspective, using a username and password from one site in another site is less than ideal. While Giant Swarm supports tokenized operations via our API, we do not (yet) support them with our hosted Docker registry. Please contact me ([@kordless](https://twitter.com/kordless)) for more information on how to work around this issue using Google's container registry, which uses tokens for authentication.*
 
+This guide will be finished in a few days...hang tight.
 
 
 
