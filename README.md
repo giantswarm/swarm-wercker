@@ -1,7 +1,7 @@
 ## Swacker: Continuously Integrated Containers
-Swacker (swarm-wercker) is a minimal static webapp which is deployed to a public version of [Giant Swarm's](https://giantswarm.io) Giant OS using [Wercker's](https://wercker.com) continuous integration service.
+Swacker (swarm-wercker) is a minimal static webapp which is deployed to a public version of [Giant Swarm's](https://giantswarm.io) Giant OS using [Wercker's](http://wercker.com) continuous integration service.
 
-The most interesting thing about Swacker is the fact you **don't** need `git`, `docker`, `boot2docker`, or anything else installed locally to launch your own containerized website on Giant Swarm. Shoot, you could probably launch the software using just your phone, now I think about it.
+The most interesting thing about Swacker is the fact you **don't need** `git`, `docker`, `boot2docker`, or anything else installed locally to launch your own containerized website on [Giant Swarm](https://giantswarm.io). Shoot, now I think about it, you could probably launch the software using just your phone!
 
 Let's get started with the detailed walk-through for deploying the code. If you like, you can skip to the [blog post version](http://giantswarm.io/code-to-hosted-container-no-docker-required/), which is less filling.
 
@@ -9,8 +9,8 @@ Let's get started with the detailed walk-through for deploying the code. If you 
 At a minimum you will need the following to launch the software:
 
 * A Github [account](https://github.com).
-* A Giant Swarm [account](https://giantswarm.io).
-* A Wercker [account](https://wercker.com).
+* A Giant Swarm [account](https://giantswarm.io/request-invite/).
+* A Wercker [account](https://app.wercker.com/users/new/).
 
 *Note: Giant Swarm's shared public cluster is currently in [private alpha](https://giantswarm.io/request-invite/). Ping [me on Twitter](https://twitter.com/kordless) if you need your application pushed through!*
 
@@ -41,7 +41,7 @@ Next, head on over to [Wercker's login page](https://app.wercker.com/sessions/ne
 
 *Note: It's been about a month or so since I activated my Wercker account, so there may be a few extra steps in setting up the rest of your account which I'm leaving out here.*
 
-Next, click on the `[create new application](https://app.wercker.com/#applications/create)` pulldown at the top of the page to create a new application. You'll click on the `Use Github` option in step #1 and then in step #2, select the repo named `swarm-wercker`:
+Next, click on the *[create new application](https://app.wercker.com/#applications/create)* pulldown at the top of the page to create a new application. You'll click on the `Use Github` option in step #1 and then in step #2, select the repo named `swarm-wercker`:
 
 ![repo'd](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/repo.png)
 
