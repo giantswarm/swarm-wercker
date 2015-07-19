@@ -41,9 +41,9 @@ Next, head on over to [Wercker's login page](https://app.wercker.com/sessions/ne
 
 ![all your base](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/wercker.png)
 
-*Note: It's been about a month or so since I activated my Wercker account, so there may be a few extra steps in setting up the rest of your account which I'm leaving out here.*
+After you allow access to your Github account, Wercker will prompt you to finish signing up for their service.
 
-Next, click on the *[create new application](https://app.wercker.com/#applications/create)* pulldown at the top of the page to create a new application. You'll click on the `Use Github` option in step #1 and then in step #2, select the repo named `swarm-wercker`:
+After you are done setting up your Wercker account and are logged in, click on the *[create new application](https://app.wercker.com/#applications/create)* pulldown at the top of the page to create a new application. You'll click on the `Use Github` option in step #1 and then in step #2, select the repo named `swarm-wercker`:
 
 ![repo'd](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/repo.png)
 
@@ -56,14 +56,16 @@ At the top right of the `swarm-wercker` project, click on the `gear icon` to vie
 
 ![deploy](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/deploy.png)
 
-Click save and then click on the `add new variable` button. You will need to create three variables, one named `user`, one named `pass`, and one name `env`, all of which you can reference in the image above.
+Click on the `add new variable` button. You will need to create three variables, one named `user`, one named `pass`, and one name `env`, all of which you can reference in the image above.
 
 These values will be, respectively, your Giant Swarm username, password and [desired environment](https://docs.giantswarm.io/reference/cli/env/) (which usually defaults to `<username>/dev`). Be sure to check the `protected` checkbox before clicking on `ok` when adding the password variable!
+
+Click on the `save` button to save the deploy target settings.
 
 *Note: From a security perspective, using a username and password from one site in another site is less than ideal. While Giant Swarm supports tokenized operations via our API, we do not (yet) support them with our hosted Docker registry. Please contact [@kordless](https://twitter.com/kordless) for more information on how to address this issue with alternate registries.*
 
 #### Build and Deploy the Project
-Builds and deploys for the project occur when you do code pushes to the `master` branch of your newly forked `swarm-wercker` repo. To trigger the build, navigate back to the project's repo in your Github account and go edit the `index.html` file in the `static` directory to look something like this:
+Builds and deploys for the project occur when you do code pushes to the `master` branch of your newly forked `swarm-wercker` repo. To trigger the build, navigate back to the project's repo in your Github account and edit the `index.html` file in the `static` directory to look something like this:
 
 ```
 <h2>Lamas love CI!</h2>
