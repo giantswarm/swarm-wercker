@@ -26,7 +26,7 @@ If you want to do local development, testing, and deploys you should have the fo
 ### Video Walk-through
 Videos guides are becoming a dime-a-dozen nowadays. I do mine from the hip and try not to overproduce them, which gives them a slightly artisan feeling. That's what I tell myself, anyway.
 
-[![](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/video.png)](https://vimeo.com/120735541)
+[![](https://raw.githubusercontent.com/giantswarm/swarm-wercker/master/static/video.png)](https://vimeo.com/134043502)
 
 ### Getting Started
 You should be able to do all these steps from a web browser, including editing a few configuration files. Make sure you have a Giant Swarm account before you begin!
