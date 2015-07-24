@@ -5,7 +5,7 @@ Swacker (swarm-wercker) is a minimal static webapp which is deployed to a public
 
 The most interesting thing about Swacker is the fact you **don't need** `git`, `docker`, `boot2docker`, or anything else installed locally to launch your own containerized website on [Giant Swarm](https://giantswarm.io). Shoot, now I think about it, you could probably launch the software using just your phone!
 
-Let's get started with the detailed walk-through for deploying the code. If you like, you can skip to the [blog post version](http://giantswarm.io/code-to-hosted-container-no-docker-required/), which is less filling.
+Let's get started with the detailed walk-through for deploying the code. If you like, you can skip to the [blog post version](https://blog.giantswarm.io/swacker-ci-deploy-an-application-no-docker-required/), which is less filling.
 
 ### Prerequisites
 At a minimum you will need the following to launch the software:
