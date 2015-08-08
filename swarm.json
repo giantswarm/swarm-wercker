@@ -1,18 +1,15 @@
 {
-  "app_name": "swacker",
-  "services": [
-    {
-      "service_name": "swacker-service",
-      "components": [
-        {
-          "component_name": "flask",
-          "image": "registry.giantswarm.io/$user/swacker",
-          "ports": ["5000/tcp"],
-          "domains": {
-            "swacker-$user.gigantic.io": "5000"
-          }
-        }
-      ]
+  "components": {
+    "swacker-service/flask": {
+      "image": "registry.giantswarm.io/$user/swacker",
+      "ports": [
+        "5000/tcp"
+      ],
+      "domains": {
+        "5000/tcp": [
+          "swacker-$user.gigantic.io"
+        ]
+      }
     }
-  ]
+  }
 }
