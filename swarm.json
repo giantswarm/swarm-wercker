@@ -1,4 +1,5 @@
 {
+  "name": "swacker",
   "components": {
     "swacker-service/flask": {
       "image": "registry.giantswarm.io/$user/swacker",
