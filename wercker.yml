@@ -30,7 +30,7 @@ deploy:
         tag: latest
         cmd: /pipeline/source/entrypoint.sh
         ports: "5000"
-        repository: registry.giantswarm.io/$user/swacker
+        repository: registry.giantswarm.io/$user/swacker2
         registry: https://registry.giantswarm.io
 
     - kordless/giantswarm:
