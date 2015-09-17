@@ -2,7 +2,7 @@
   "name": "swacker",
   "components": {
     "swacker-service/flask": {
-      "image": "registry.giantswarm.io/$user/swacker2",
+      "image": "registry.giantswarm.io/$user/swacker",
       "ports": [
         "5000/tcp"
       ],
